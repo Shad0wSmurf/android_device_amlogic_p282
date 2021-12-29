@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/amlogic/p281
+DEVICE_PATH := device/amlogic/p282
 
 # Bootloader
 TARGET_NO_RADIOIMAGE := true
@@ -41,7 +41,7 @@ TARGET_SUPPORTS_64_BIT_APPS := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := p281
+TARGET_OTA_ASSERT_DEVICE := p282
 
 # Audio
 BOARD_USES_GENERIC_AUDIO := false
@@ -62,8 +62,8 @@ BOARD_KERNEL_OFFSET := 0x00008000
 TARGET_KERNEL_ARCH := arm64
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-TARGET_KERNEL_CONFIG := p281_defconfig
-TARGET_KERNEL_SOURCE := kernel/amlogic/p281
+TARGET_KERNEL_CONFIG := p282_defconfig
+TARGET_KERNEL_SOURCE := kernel/amlogic/p282
 endif
 BOARD_KERNEL_CMDLINE :=  androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := zImage
@@ -88,10 +88,10 @@ TARGET_RECOVERY_FORCE_PIXEL_FORMAT := "RGB_565"
 LZMA_RAMDISK_TARGETS := recovery
 
 # Seccomp
-BOARD_SECCOMP_POLICY := device/amlogic/p281/seccomp
+BOARD_SECCOMP_POLICY := device/amlogic/p282/seccomp
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/amlogic/p281/sepolicy
+BOARD_SEPOLICY_DIRS += device/amlogic/p282/sepolicy
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
@@ -117,4 +117,4 @@ BOARD_HOSTAPD_DRIVER        := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
 
 # Inherit from the proprietary version
-include vendor/amlogic/p281/BoardConfigVendor.mk
+include vendor/amlogic/p282/BoardConfigVendor.mk

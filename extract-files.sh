@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=p281
+DEVICE=p282
 VENDOR=amlogic
 
 # Load extract_utils and do some sanity checks
